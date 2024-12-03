@@ -21,8 +21,9 @@ def input_user():
             break
         controle +=1
         i+=1
-def mudar_turno():
-    if turno == "x":
-        turno = "O"
-    elif turno == "O":
-        turno = "x"
+def mudar_turno(this):
+    this.turno = turno
+    if this.turno == "x":
+        this.turno = "O"
+    elif this.turno == "O":
+        this.turno = "x"

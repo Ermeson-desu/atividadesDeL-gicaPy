@@ -1,3 +1,9 @@
-turma = [["João", "Maria", "José"],[20,22,21]]
+frutas = ['maçã', 'banana', 'laranja', 'uva']
+tamanho = len(frutas)
+posicao = 0
 
-print(f"Nome do ")
+while posicao < tamanho :
+    print(f"Removendo {frutas[0]}")
+    frutas.pop(0)
+    posicao += 1
+    

@@ -1,3 +1,6 @@
-frutas = ["maçã", "banana", "laranja", "uva"]
+animal = ["Coelho", "Gato", "Cachorro"]
 
-print(f"Segundo elemento: {frutas[1]}")
+contador = 0
+while contador < len(animal):
+    print(f"{animal[contador]}")
+    contador+=1

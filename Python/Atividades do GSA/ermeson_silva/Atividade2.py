@@ -1,4 +1,6 @@
-frutas = ["maçã", "banana", "laranja", "uva"]
+numero = [10, 20, 30, 40, 50]
 
-frutas.append("abacaxi")
-print(frutas)
+contador = 0
+while contador < len(numero):
+    print(f"{numero[contador]}")
+    contador+=1

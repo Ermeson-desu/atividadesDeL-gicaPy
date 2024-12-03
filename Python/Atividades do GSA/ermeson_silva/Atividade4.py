@@ -1,6 +1,8 @@
-numeros = [5,2,9,1,5,6]
+pares = []
 
-# ordem crescente
-numeros.sort()
-
-print(numeros)
+contador = -1
+while contador <= 20:
+    if contador % 2 == 0:
+        pares.append(contador)
+        print(contador)
+    contador+=1
