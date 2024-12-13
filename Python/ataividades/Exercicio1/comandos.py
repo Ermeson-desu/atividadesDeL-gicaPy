@@ -1,4 +1,5 @@
 import os
+import ui_interface
 
 posicoes = [1,2,3,4,5,6,7,8,9]
 game_over = False
@@ -69,12 +70,16 @@ def mudar_turno():
 def verificar_vitoria():
     global game_over 
     if vitoria_horizontal() == True:
+        ui_interface.vitoria()
         game_over = True
     elif vitoria_vertical() == True:
+        ui_interface.vitoria()
         game_over = True
     elif vitoria_diagonal() == True:
+        ui_interface.vitoria()
         game_over = True
     elif empate() == True:
+        
         game_over =True
     return False
 
