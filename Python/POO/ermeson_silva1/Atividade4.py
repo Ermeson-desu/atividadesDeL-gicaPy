@@ -1,4 +1,3 @@
-
 def numeros_pares_lista(lista):
     for i in range(len(lista)):
         if lista[i] % 2 == 0:
