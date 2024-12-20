@@ -1,0 +1,23 @@
+body
+{
+    background-color: rgba(238, 231, 237, 0.836);
+}
+.coluna-flex
+{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5em;
+}
+.largura-40
+{
+    width: 7em;
+}
+.button
+{
+    
+}
+:placeholder-shown
+{
+    height: 15px;
+    font-size: 5px;
+}
