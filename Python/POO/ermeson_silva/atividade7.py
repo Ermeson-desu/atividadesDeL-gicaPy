@@ -1,5 +1,4 @@
 class Calculadora:
-    @staticmethod
     def elevar_quadrado(valor):
         return valor * valor
     

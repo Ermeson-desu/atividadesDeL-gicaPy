@@ -23,7 +23,7 @@ class ContaBancaria:
 
     #  subtrai o valor que o usuário inseriu com o valor do saldo anterior
     def sacar(self,saque:int):
-        if self.get_saldo() >= 0:
+        if self.get_saldo() >= 0 or saque <= self.get_saldo():
             self.set_saldo(self.get_saldo() - saque)
         else:
             print("Saldo insuficiente!!")
@@ -31,4 +31,4 @@ class ContaBancaria:
 conta = ContaBancaria("João", 1000)
 conta.depositar(500)
 conta.sacar(200)
-print(f"saldo da conta: {conta.get_saldo()}")
+print(f"saldo da conta: R$ {conta.get_saldo()}")
