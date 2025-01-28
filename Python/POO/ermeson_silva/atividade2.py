@@ -1,8 +1,26 @@
-while True:
-    try:
-        numeros = [10,20,30]
-        entrada = int(input("Escolha um dos indices a seguir: [0,1,2]: "))
-        print(f"{numeros[entrada]}")
-        break
-    except:
-        print("Opção inválido! Por favor, escolha uma opção válida!")
+from abc import ABC,abstractmethod
+
+class Veiculo(ABC):
+    @abstractmethod
+    def mover(self):
+        ...
+
+class Carro(Veiculo):
+    def mover(self):
+        print("O carro está movendo.")
+
+class Bicicleta(Veiculo):
+    def mover(self):
+        print("A bicicleta está movendo.")
+
+try:
+    veiculo = Veiculo()  
+except TypeError as e:
+    print(f"Erro ao criar uma instância de Veiculo: {e}")
+
+
+carro = Carro()
+carro.mover()
+
+bicicleta = Bicicleta()
+bicicleta.mover()

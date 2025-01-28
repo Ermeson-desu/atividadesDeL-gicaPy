@@ -1,22 +1,38 @@
-import math 
-class ErroNumeroNegativo(Exception):
-    def __init__(self,mensagem):
-        self.mensagem = mensagem
-        super().__init__(self.mensagem)
-def tratamento(numero):
-    if numero < 0:
-        return f"Raiz quadrada indefinida!"
-print("========= CALCULAR RAIZ QUADRADA =========")
-while True:
-    try:
-        numero = float(input("Digite os número da operação: "))
-        resultado = math.sqrt(numero)
-        if numero < 0:
-            raise ErroNumeroNegativo("Não existe raiz quadrada de números negativos.")
-        tratamento(numero)
-        print(f"A raiz quadrada de {numero} é {resultado}")
-        break
-    except ErroNumeroNegativo as e :
-        print(e)
-    except:
-        print("Número inválido, por favor, digite um valor válido.")
+class Estoque:
+    def __init__(self):
+     
+        self.produtos = []
+
+    def adicionar_produto(self, produto):
+        """Adiciona um produto ao estoque."""
+        self.produtos.append(produto)
+        print(f'Produto "{produto}" adicionado ao estoque.')
+
+    def remover_produto(self):
+        """Remove o último produto do estoque."""
+        try:
+            if len(self.produtos) == 0:
+                raise ValueError("O estoque está vazio. Não há produtos para remover.")
+            produto_removido = self.produtos.pop()
+            print(f'Produto "{produto_removido}" removido do estoque.')
+        except ValueError as e:
+            print(f'Erro: {e}')
+
+    def mostrar_estoque(self):
+        """Exibe todos os produtos no estoque."""
+        if self.produtos:
+            print("Produtos no estoque:")
+            for produto in self.produtos:
+                print(f'- {produto}')
+        else:
+            print("O estoque está vazio.")
+
+estoque = Estoque()
+estoque.adicionar_produto("Produto 1")
+estoque.adicionar_produto("Produto 2")
+estoque.mostrar_estoque()
+
+estoque.remover_produto()
+estoque.remover_produto()
+estoque.remover_produto()  
+estoque.mostrar_estoque()
